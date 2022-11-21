@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -17,6 +18,8 @@ class CategoryController extends Controller
     {
         $categories = Category::withCount('posts')->where('deleted_at', null)->get();
         $trashCategories = Category::withCount('posts')->onlyTrashed()->get();
+       
+       
         return view('backend.category.index', compact('categories', 'trashCategories'));
     }
 

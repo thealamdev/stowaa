@@ -59,15 +59,17 @@
 		<div class="row">
 			<div class="col-lg-4">	 
 					<div class="dashboard_item">
-						<h3>Total Post</h3>
-						<p>20 posts</p>
+						<h3>Total Categories</h3>
+						<p> {{ $categories->count() }} Categories</p>
 					</div> 
 			</div>	 
 
 			<div class="col-lg-4">	 
 				<div class="dashboard_item">
-					<h3>Single posts</h3>
-					<p>5 posts</p>
+					<h3>Total Post</h3>
+					@foreach ($categories as $category) 
+					<p>{{ $category->posts_count }}</p>
+					@endforeach
 				</div> 
 		</div>
 
@@ -77,6 +79,8 @@
 				<p>15 posts</p>
 			</div> 
 	    </div>
+
+		 
 		</div>
 	</div>
 @endsection
