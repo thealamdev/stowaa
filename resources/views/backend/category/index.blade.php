@@ -16,7 +16,7 @@
                          </div>
 
                          <div class="mb-3">
-                            <label for="">Enter Category Parent</label>
+                            <label for="parent_id">Enter Category Parent</label>
                              <select name="parent_id" id="" class="form-control">
                                 <option value="" selected disabled>Select Parent Category</option>
                                 @foreach ($categories as $category)

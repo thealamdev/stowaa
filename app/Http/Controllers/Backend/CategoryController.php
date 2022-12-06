@@ -117,7 +117,7 @@ class CategoryController extends Controller
             $image_name = $category->image;
         }
 
-         
+        
           $category->name = $request->name;
           $category->parent_id = $request->parent_id;
           $category->image = $image_name;
